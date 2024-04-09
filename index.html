@@ -50,6 +50,44 @@
 			</nav>
 		</div>
 	</header>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+
+		  	var links = document.querySelectorAll('.nav-link');
+			var lis = document.querySelectorAll('.nav-item');
+		
+			  links.forEach(function(link) {
+
+				link.addEventListener('click', function() {
+					
+					event.preventDefault();
+
+					// Parcourir tous les éléments <li> dans le menu
+					lis.forEach(function(a) {
+
+						// Vérifier si l'élément <li> a la classe active
+						if (a.classList.contains('active')) {
+							
+							// Si oui, supprimer la classe active
+							a.classList.remove('active');
+						}
+
+						// Ajouter la classe active à l'élément <li> sur lequel on a cliqué
+						link.parentElement.classList.add('active');
+					});
+
+					var targetId = link.getAttribute('href').substring(1); // Récupère l'identifiant de l'élément cible sans le #
+                    var targetElement = document.getElementById(targetId); // Obtient l'élément cible
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' }); // Fait défiler jusqu'à l'élément cible avec un effet de défilement fluide
+                    }
+
+				});  
+		  	})
+		});
+	</script>
 	<!--================ End Header Area =================-->
 
 	<!--================ Start Home Banner Area =================-->
@@ -59,7 +97,7 @@
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="banner_content">
-							<h3 class="text-uppercase">Bonjour</h3>
+							<h3 class="text-uppercase">Bonjour,</h3>
 							<h1 class="text-uppercase" style="font-size: 45px;">Je suis Corentin Jeannot</h1>
 							<h5 class="text-uppercase">développeur web</h5>
 							<div class="d-flex align-items-center">
@@ -93,28 +131,42 @@
 					<div class="main_title text-left">
 						<h2>Mon Parcours Professionnel</h2>
 						<p>
-							Originaire de Laval (53000), je suis un jeune étudiant de 24 ans <strong>passionné de programmation informatique</strong>, 
-							notamment dans le domaine du développement web. Cela fait maintenant 9 ans (en classe de seconde générale) qu'à eu lieu "le" cours qui m'a donné
-							gôut à ce domaine, il s'agit d'une option nommée <strong>SNAPI</strong>. 
+							Originaire de Laval (53000), je suis un étudiant de 24 ans <strong>passionné de programmation informatique</strong>, 
+							plus particulièrement dans le développement web. Cela fait maintenant 9 ans que je m'intéresse à ce domaine. 
+							C'est en classe de seconde que j'ai introduit cette notion à travers l'option nommée <strong>SNAPI</strong> proposée au lycée Réaumur à Laval.
 						</p>
 						<p>
 							Durant cet enseignement, j'ai utilisé le logiciel <strong>Processing</strong> afin d'afficher des formes sur une interface graphique. 
-							En fin d'année, j'ai eu pour comme projet de <strong>programmer un robot (sous forme de bras manipulateur)</strong> afin de lui faire déplacer 
-							une pile de 6 dés d'un point A vers un point B. Mes camarades et moi étions très satisfait de réaliser cet objectif.
+							En fin d'année, j'ai travaillé sur un projet qui consistait à <strong>programmer un robot (sous forme de bras manipulateur)</strong> 
+							pour qu'il déplace une pile de 6 dés d'un point A vers un point B. Mes camarades et moi étions très satisfaits de réaliser cet objectif.
 						</p>
 						<p>
-							À l'issue de mes années au lycée, j'ai décroché le diplome du Bac STI2D (option ITEC). A partir de la, j'ai intégré une première année
-							de classe préparatoire au sein de l'école d'ingénieur <strong>ESIEA (Laval)</strong>. J'ai souhaité changer de formation car je ne trouvais pas assez de pratique
-							comparé à la théorie. 
+							À l'issue de l'obtention du Bac STI2D (option ITEC), j'ai intégré une première année de classe préparatoire au sein de l'école d'ingénieur 
+							<strong>ESIEA à Laval</strong>. J'ai souhaité changer de voie car je ne trouvais pas assez de pratique et je jugeais l'enseignement trop théorique.
 						</p>
 						<p>	
-							C'est alors que je me suis redirigé vers <strong>l'Institut d'Informatique Appliquée (Laval)</strong> pour découvrir le développement
-							web et forger mes compétences dans ce sous domaine de la programmation informatique. J'ai pu franchir les étapes suivantes : 
+							Je me suis ensuite redirigé vers l'établissement <strong>Institut d'Informatique Appliquée à Laval</strong> pour découvrir le développement web. 
+							Dans le cadre de mes formations, j'ai obtenu les diplômes suivants :
 							<ul>
 								<li>BTS (Services Informatiques aux Organisations - SLAM)</li>
-								<li>Licence Générale</li>
-								<li>Master (Manager en Ingénierie Informatique - Lead DEV)</li>
+								<li>Licence Informatique Générale <strong style="color: red;">(En alternance)</strong></li>
+								<li>Master (Manager en Ingénierie Informatique - Lead DEV) <strong style="color: red;">(En alternance)</strong></li>
 							</ul>
+						</p>
+						<p>
+							J'ai intégré le site de production de <strong>Michelin à Cholet (49300)</strong> en tant qu'alternant de la Licence jusqu'en 2ème année de Master.
+							Durant cette période, mon objectif a été de <strong>digitaliser une application web de gestion des moules</strong> (remplaçant un fichier Excel).
+							Cette expérience m'a permi de :
+							<ul>
+								<li><strong>Assurer</strong> la transmission complète du projet à l'alternant qui prendra le relais après mon départ</li>
+								<li><strong>Renforcer</strong> mon bagage technique. En effet, j'ai découvert et approfondis certains langages comme Node JS, Angular et Laravel.</li>
+								<li><strong>Maitriser</strong> le déploiement via un serveur FTP mis à disposition par le service Info Tel</li>
+								<li><strong>Impliquer</strong> les clients tout au long du projet à travers des réunions et des semaines de tests de fonctionnalités</li>
+								<li><strong>Contribuer/Bénéficier</strong> du soutien de l'équipe BibDev (groupe d'alternants digitaux du site de Cholet)</li>
+							</ul>
+						</p>
+						<p>	
+							Pour plus de détail, vous pouvez consulter mon CV ci-dessous.
 						</p>
 						<a class="primary_btn" href="doc/cv.pdf"><span>CV</span></a>
 					</div>
