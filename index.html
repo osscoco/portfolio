@@ -131,8 +131,25 @@
 					<div class="main_title text-left">
 						<h2>Mon Parcours Professionnel</h2>
 						<p>
-							Originaire de Laval (53000) et agé de 25 ans, je suis <strong>passionné de programmation informatique</strong> et
-							plus particulièrement de développement web. Cela fait maintenant 9 ans que je m'intéresse à ce domaine. 
+							Originaire de <strong>Laval (53000)</strong> et agé de
+							<strong>
+							<script>
+								const birthYear = 1999;  // Ton année de naissance
+								const birthMonth = 10;   // Novembre (les mois commencent à 0 en JS, donc novembre = 10)
+								const birthDay = 21;     // Jour de naissance
+							
+								const today = new Date();
+								let age = today.getFullYear() - birthYear;
+							
+								// Vérifier si l'anniversaire est déjà passé cette année
+								if (today.getMonth() < birthMonth || (today.getMonth() === birthMonth && today.getDate() < birthDay)) {
+									age--; // On enlève 1 si l'anniversaire n'est pas encore passé
+								}
+							
+								document.write(age);
+							</script>
+							 ans </strong>, je suis <strong>passionné de programmation informatique</strong> et
+							plus particulièrement de développement web. Cela fait maintenant <script>document.write(new Date().getFullYear() - 2016);</script> ans que je m'intéresse à ce domaine. 
 							C'est en classe de seconde que j'ai découvert cet univers à travers l'option <strong>SNAPI</strong>.
 							Durant cet enseignement, j'ai utilisé le logiciel <strong>Processing</strong> afin d'afficher des formes sur une interface graphique. 
 							En fin d'année, j'ai travaillé sur un projet qui consistait à <strong>programmer un robot</strong>, sous forme de bras manipulateur, 
@@ -140,18 +157,18 @@
 						</p>
 						<p>
 							Suite à l'obtention de mon Bac STI2D (option ITEC), j'ai intégré l'école d'ingénieur 
-							<strong>ESIEA à Laval</strong> en classe préparatoire. J'ai souhaité changer de voie car l'enseignement n'était pas assez pratique à mon goût, je le jugeais trop théorique.
+							<strong>ESIEA à Laval</strong> en classe préparatoire. J'ai souhaité changer de voie car je commençais à m'intéresser de plus en plus à la création de site internet, et souhaitais m'inscrire dans un nouvel établissement.
 							Je me suis donc redirigé vers une formation de développement web dispensée par l'<strong>Institut d'Informatique Appliquée à Laval</strong>. 
 							Dans le cadre de ce parcours, j'ai obtenu les diplômes suivants :
 							<ul>
-								<li>BTS (Services Informatiques aux Organisations - SLAM)</li>
-								<li>Licence Informatique Générale <strong style="color: red;">(En alternance)</strong></li>
-								<li>Master (Manager en Ingénierie Informatique - Lead DEV) <strong style="color: red;">(En alternance)</strong></li>
+								<li>BTS (Services Informatiques aux Organisations - SLAM) - <strong>(Statut d'étudiant)</strong></li>
+								<li>Licence Informatique Générale - <strong>(Statut d'alternant)</strong></li>
+								<li>Master (Manager en Ingénierie Informatique - Lead DEV) - <strong>(Statut d'alternant)</strong></li>
 							</ul>
 						</p>
 						<p>
 							A partir de la Licence jusqu'à la 2ème année de Master, j'ai effectué mon alternance sur le site de production de <strong>Michelin à Cholet (49300)</strong>.
-							Durant cette période, ma mission a consisté en la <strong>digitalisation d'une application web de gestion des moules</strong>, ayant pour objectif de remplacer les fichiers Excel en place.
+							Durant cette période, ma mission a consisté en la <strong>digitalisation d'une application web de gestion des moules de pneus</strong>, ayant pour objectif de remplacer les fichiers Excel en place.
 							Cette expérience m'a permis de :
 							<ul>
 								<li><strong>Renforcer</strong> mon bagage technique. En effet, j'ai découvert et approfondi certains langages comme Node JS, Angular et Laravel ;</li>
@@ -160,6 +177,10 @@
 								<li><strong>Contribuer/Bénéficier</strong> du soutien de l'équipe BibDev (groupe d'alternants digitaux du site de Cholet) ;</li>
 								<li><strong>Assurer</strong> la transmission complète du projet à l'alternant qui prendra le relais après mon départ.</li>
 							</ul>
+						</p>
+						<p>
+							Grâce à ces expériences, j’ai pu renforcer mes compétences en développement web et apprendre à travailler efficacement. J’aime relever de nouveaux défis, 
+							apprendre en continu et m’améliorer, aussi bien sur le plan technique que dans ma façon de collaborer avec les autres. Je suis motivé à progresser et à évoluer dans un environnement qui me permettra de développer mon savoir-faire.
 						</p>
 						<!-- <p>	
 							Pour plus de détail, vous pouvez consulter mon CV ci-dessous.
@@ -209,13 +230,6 @@
 						<div class="col-lg-4 col-md-4 col-sm-6">
 							<div class="single-brand-item d-table">
 								<div class="d-table-cell text-center">
-									<img src="img/brands/Java.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
 									<img src="img/brands/Nodejs.png" alt="">
 								</div>
 							</div>
@@ -224,6 +238,13 @@
 							<div class="single-brand-item d-table">
 								<div class="d-table-cell text-center">
 									<img src="img/brands/Net.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="img/brands/Java.png" alt="">
 								</div>
 							</div>
 						</div>
@@ -309,6 +330,7 @@
         				<div class="row">
         					<div class="col-lg-4">
         						<img src="img/testimonials/MICHELIN.png" alt="">
+								Durée : <strong>3 ans</strong>
         					</div>
         					<div class="col-lg-8">
         						<div class="testi_text">
@@ -323,6 +345,7 @@
         				<div class="row">
         					<div class="col-lg-4">
         						<img src="img/testimonials/CH.png" alt="">
+								Durée : <strong>2 mois</strong>
         					</div>
         					<div class="col-lg-8">
         						<div class="testi_text">
@@ -337,6 +360,7 @@
         				<div class="row">
         					<div class="col-lg-4">
         						<img src="img/testimonials/IUT.png" alt="">
+								Durée : <strong>2 mois</strong>
         					</div>
         					<div class="col-lg-8">
         						<div class="testi_text">
